@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "477273256237",
+    "firebase_url": "https://videocall0709.firebaseio.com",
+    "project_id": "videocall0709",
+    "storage_bucket": "videocall0709.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477273256237:android:66cc7291e3aa5ac19e23a4",
+        "android_client_info": {
+          "package_name": "com.example.videochat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477273256237-3v5gc7tt6jhdaikcd204kc9p2p9sqnav.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.videochat",
+            "certificate_hash": "12a35765e2bf0c4f473401dfaa4abad3d2096727"
+          }
+        },
+        {
+          "client_id": "477273256237-eqkgh8fnr1bodg7a2mb8h2seb878o3hv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVJDwzLXhZkuyO2Zkqs_y0yi1ry56CLxg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "477273256237-eqkgh8fnr1bodg7a2mb8h2seb878o3hv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
