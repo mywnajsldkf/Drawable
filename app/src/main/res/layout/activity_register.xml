@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="256dp"/>
+
+    <RelativeLayout
+        android:id="@+id/phoneAuth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview1"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:text="Phone Number: "
+                android:textSize="18sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                app:ccp_defaultNameCode="Kr"/>
+
+            <EditText
+                android:id="@+id/phoneText"
+                android:layout_width="match_parent"
+                android:layout_height="60sp"
+                android:hint="12312341234"
+                android:text="#fff"
+                android:textColor="#fff"
+                android:textColorLink="#6F6666"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:backgroundTint="#fff"/>
+
+        </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    
+    <EditText
+        android:id="@+id/codeText"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_margin="25dp"
+        android:hint="Write your code here"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        android:inputType="phone"
+        android:singleLine="true"
+        android:layout_below="@+id/phoneAuth"
+        android:drawableLeft="@drawable/password"
+        android:drawableTint="#fff"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/continueNextButton"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/codeText"
+        android:layout_centerHorizontal="true"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:layout_marginTop="6dp"
+        android:textSize="15dp"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="#fff"/>
+
+</RelativeLayout>
