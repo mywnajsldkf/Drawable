@@ -1,5 +1,6 @@
 package com.example.videochat;
 
+<<<<<<< HEAD
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
@@ -45,10 +46,19 @@ public class SettingsActivity extends AppCompatActivity {
     private DatabaseReference userRef;
     private ProgressDialog progressDialog;
 
+=======
+import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class SettingsActivity extends AppCompatActivity {
+
+>>>>>>> 36cc550... Bottom Navigation Bar
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+<<<<<<< HEAD
 
         userProfileImgRef = FirebaseStorage.getInstance().getReference().child("Profile Images");
         userRef = FirebaseDatabase.getInstance().getReference().child("Users");
@@ -249,5 +259,7 @@ public class SettingsActivity extends AppCompatActivity {
                     }
 
                 });
+=======
+>>>>>>> 36cc550... Bottom Navigation Bar
     }
 }

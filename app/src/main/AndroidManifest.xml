@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".VideoCallActivity"></activity>
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".CallingActivity" />
@@ -21,6 +22,14 @@
         <activity
             android:name=".ContactsActivity"
             android:label="@string/title_activity_main" >
+=======
+        <activity android:name=".NotificationActivity"></activity>
+        <activity android:name=".SettingsActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" />
+        <activity android:name=".RegisterActivity">
+>>>>>>> 36cc550... Bottom Navigation Bar
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

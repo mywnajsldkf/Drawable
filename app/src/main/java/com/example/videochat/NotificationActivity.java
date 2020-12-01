@@ -1,6 +1,7 @@
 package com.example.videochat;
 
 import android.os.Bundle;
+<<<<<<< HEAD
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,10 +37,18 @@ public class NotificationActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private String currentUserId;
 
+=======
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class NotificationActivity extends AppCompatActivity {
+
+>>>>>>> 36cc550... Bottom Navigation Bar
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
+<<<<<<< HEAD
 
         mAuth = FirebaseAuth.getInstance();
         currentUserId = mAuth.getCurrentUser().getUid();
@@ -228,5 +237,7 @@ public class NotificationActivity extends AppCompatActivity {
             profileImageView = itemView.findViewById(R.id.image_notification);
             cardView = itemView.findViewById(R.id.card_view);
         }
+=======
+>>>>>>> 36cc550... Bottom Navigation Bar
     }
 }
