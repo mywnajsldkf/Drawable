@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
@@ -138,6 +139,19 @@ public class RegisterActivity extends AppCompatActivity {
                 Toast.makeText(RegisterActivity.this, "Code has been Sent...", Toast.LENGTH_SHORT).show();
             }
         };
+    }
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+
+        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+
+        if (firebaseUser != null){
+            Intent homeIntent = new Intent(RegisterActivity.this, MainActivity.class);
+            startActivity(homeIntent);
+            finish();
+        }
     }
 
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
