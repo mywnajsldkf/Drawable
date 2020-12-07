@@ -99,6 +99,8 @@ public class ContactsActivity extends AppCompatActivity {
     protected void onStart(){
         super.onStart();
 
+        validateUser();
+
         FirebaseRecyclerOptions<Contacts> options
                 = new FirebaseRecyclerOptions.Builder<Contacts>()
                 .setQuery(contactsRef.child(currentUserId), Contacts.class)
@@ -119,6 +121,15 @@ public class ContactsActivity extends AppCompatActivity {
 
                             holder.userNameTxt.setText(userName);
                             Picasso.get().load(profileImage).into(holder.profileImageView);
+
+                            holder.callBtn.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    Intent callingIntent = new Intent(ContactsActivity.this,CallingActivity.class);
+                                    callingIntent.putExtra("visit_user_id",listUserId);
+                                    startActivity(callingIntent);
+                                }
+                            });
                         }
 
                     }
@@ -158,4 +169,23 @@ public class ContactsActivity extends AppCompatActivity {
             profileImageView = itemView.findViewById(R.id.image_contact);
         }
     }
+
+    private void validateUser() {
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+
+        reference.child("Users").child(currentUserId).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Intent settingIntent = new Intent(ContactsActivity.this, SettingsActivity.class);
+                startActivity(settingIntent);
+                finish();
+            }
+        });
+    }
+
 }
