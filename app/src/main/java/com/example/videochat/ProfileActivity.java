@@ -133,17 +133,16 @@ public class ProfileActivity extends AppCompatActivity {
                     }
 
                      if (currentStatus.equals("request_sent")){
-                         CancelFriendRequest();
-
-                    }
-                     if (currentStatus.equals("request_received")){
                          AcceptFriendRequest();
 
                     }
-                    if (currentStatus.equals("request_sent")){
-                        CancelFriendRequest();
+                     if (currentStatus.equals("request_received")){
+                         CancelFriendRequest();
 
                     }
+                     if(currentStatus.equals("request_sent")){
+                         CancelFriendRequest();
+                     }
                 }
             });
         }

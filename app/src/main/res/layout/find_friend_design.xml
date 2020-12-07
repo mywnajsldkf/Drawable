@@ -48,7 +48,8 @@
             android:textColor="#fff"
             android:textAllCaps="false"
             android:textSize="14dp"
-            android:text="Accept Friend Request"/>
+            android:text="Accept Friend Request"
+            android:visibility="gone"/>
 
         <Button
             android:id="@+id/request_decline_btn"
