@@ -11,10 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NotificationActivity"></activity>
+        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".FindPeopleActivity" />
+        <activity android:name=".NotificationActivity" />
         <activity android:name=".SettingsActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ContractsActivity"
             android:label="@string/title_activity_main" />
         <activity android:name=".RegisterActivity">
             <intent-filter>
