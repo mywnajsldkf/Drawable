@@ -16,7 +16,7 @@
         <activity android:name=".NotificationActivity" />
         <activity android:name=".SettingsActivity" />
         <activity
-            android:name=".ContractsActivity"
+            android:name=".ContactsActivity"
             android:label="@string/title_activity_main" />
         <activity android:name=".RegisterActivity">
             <intent-filter>

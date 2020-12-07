@@ -148,7 +148,7 @@ public class RegisterActivity extends AppCompatActivity {
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
         if (firebaseUser != null){
-            Intent homeIntent = new Intent(RegisterActivity.this, ContractsActivity.class);
+            Intent homeIntent = new Intent(RegisterActivity.this, ContactsActivity.class);
             startActivity(homeIntent);
             finish();
         }
@@ -178,7 +178,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void sendUserToMainActivity(){
-        Intent intent = new Intent(RegisterActivity.this, ContractsActivity.class);
+        Intent intent = new Intent(RegisterActivity.this, ContactsActivity.class);
         startActivity(intent);
         finish();
     }

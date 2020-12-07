@@ -165,7 +165,7 @@ public class SettingsActivity extends AppCompatActivity {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if (task.isSuccessful()){
-                                            Intent intent = new Intent(SettingsActivity.this, ContractsActivity.class);
+                                            Intent intent = new Intent(SettingsActivity.this, ContactsActivity.class);
                                             startActivity(intent);
                                             finish();
 
@@ -213,7 +213,7 @@ public class SettingsActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if (task.isSuccessful()){
-                        Intent intent = new Intent(SettingsActivity.this, ContractsActivity.class);
+                        Intent intent = new Intent(SettingsActivity.this, ContactsActivity.class);
                         startActivity(intent);
                         finish();
 
