@@ -85,7 +85,7 @@ public class ContactsActivity extends AppCompatActivity {
                     break;
                 case R.id.navigation_logout:
                     FirebaseAuth.getInstance().signOut();
-                    Intent logoutIntent = new Intent(ContactsActivity.this, RegisterActivity.class);
+                    Intent logoutIntent = new Intent(ContactsActivity.this, RegistrationActivity.class);
                     startActivity(logoutIntent);
 
                     finish();

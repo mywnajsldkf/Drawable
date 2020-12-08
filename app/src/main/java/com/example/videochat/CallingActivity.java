@@ -53,9 +53,32 @@ public class CallingActivity extends AppCompatActivity {
         cancelCallBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
+
                 checker="clicked";
 
                 cancelCallingUser();
+            }
+        });
+
+        acceptCallBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                final HashMap<String, Object> callingPickUpMap = new HashMap<>();
+                callingPickUpMap.put("picked","picked");
+
+                userRef.child(senderUserId).child("Ringing")
+                        .updateChildren(callingPickUpMap)
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                Intent intent = new Intent(CallingActivity.this, VideoCallActivity.class);
+                                startActivity(intent);
+                            }
+                        });
             }
         });
 
@@ -100,6 +123,7 @@ public class CallingActivity extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if (!checker.equals("clicked") && !dataSnapshot.hasChild("Calling") && !dataSnapshot.hasChild("Ringing")){
 
+
                             final HashMap<String, Object> callingInfo = new HashMap<>();
 
                             callingInfo.put("calling", receiverUserId);
@@ -138,6 +162,12 @@ public class CallingActivity extends AppCompatActivity {
                     acceptCallBtn.setVisibility(View.VISIBLE);
 
                 }
+
+                if(dataSnapshot.child(receiverUserId).child("Ringing").hasChild("picked"))
+                {
+                    Intent intent = new Intent(CallingActivity.this, VideoCallActivity.class);
+                    startActivity(intent);
+                }
             }
 
             @Override
@@ -174,7 +204,7 @@ public class CallingActivity extends AppCompatActivity {
                                                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                                                             @Override
                                                             public void onComplete(@NonNull Task<Void> task) {
-                                                                startActivity(new Intent(CallingActivity.this, RegisterActivity.class));
+                                                                startActivity(new Intent(CallingActivity.this, RegistrationActivity.class));
                                                                 finish();
 
                                                             }
@@ -226,7 +256,7 @@ public class CallingActivity extends AppCompatActivity {
                                                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                                                             @Override
                                                             public void onComplete(@NonNull Task<Void> task) {
-                                                                startActivity(new Intent(CallingActivity.this, RegisterActivity.class));
+                                                                startActivity(new Intent(CallingActivity.this, RegistrationActivity.class));
                                                                 finish();
 
                                                             }
